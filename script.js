@@ -1,7 +1,7 @@
 
 
 // setting the div as the map and setting the latitude and longitude and the zoom level
-var map = L.map('map').setView([39.61, -105.02], 19);
+var map = L.map('map').setView([32, -130], 19);
 
 
 
@@ -50,6 +50,9 @@ function markerOnClick(e){
 
     marker.addTo(markerGroup);
     updateMarkerCount()
+    var videoUrl = 'https://www.mapbox.com/bites/00188/patricia_nasa.webm',
+    videoBounds = [[ 32, -130], [ 13, -100]];
+    L.videoOverlay(videoUrl, videoBounds ).addTo(map);
 };
 
 
